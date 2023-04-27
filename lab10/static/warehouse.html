@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warehouse</title>
+    <style>
+        th {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Count</th>
+            <th>Serial</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        {{range .}}
+        <tr>
+            {{if eq .Name "Jeans"}}
+            very good choice
+            {{end}}
+            <td>{{.Id}}</td>
+            <td>{{.Name}}</td>
+            <td>{{.Color}}</td>
+            <td>{{.Count}}</td>
+            <td>{{.Serial}}</td>
+            <form action="/update"><td>
+                <button type="submit" value={{.Id}} name="id">Update</button></td></form>
+            <form action="/delete"><td>
+                <button type="submit" value={{.Id}} name="id">Delete</button></td></form>
+
+        </tr>
+        {{end}}
+    </table>
+</body>
+</html>

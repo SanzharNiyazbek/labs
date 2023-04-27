@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Warehouse</title>
+</head>
+<body>
+<div style="margin-bottom: 10px">
+  Form to update product from warehouse
+</div>
+  <form action="/update" method="post">
+    <div style="margin-bottom: 10px">
+      <input type="text" name="name" placeholder="Name of product" style="width: 200px">
+    </div>
+    <div style="margin-bottom: 10px">
+      <input type="text" name="color" placeholder="Color" style="width: 200px">
+    </div>
+    <div style="margin-bottom: 10px">
+      <input type="text" name="count" placeholder="Count" style="width: 200px">
+    </div>
+    <div style="margin-bottom: 10px">
+      <input type="text" name="serial" placeholder="Serial number of product" style="width: 200px">
+    </div>
+    <input type="hidden" name="id" style="width: 200px" value={{.id}}>
+    <div style="margin-bottom: 10px">
+      <button type="submit" style="width: 100px">Update</button>
+    </div>
+    <div>
+    </div>
+  </form>
+</body>
+</html>
